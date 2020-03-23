@@ -141,7 +141,3 @@ if(stars){
 
 
 }
-
-function windowResized(){
-  canvas = resizeCanvas(windowWidth/1.6,windowHeight);
-}
