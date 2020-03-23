@@ -50,7 +50,7 @@ function setup() {
   gravConst = 6.67408 * pow(10, -52);
   sun_mass = 1.9891 * pow(10, 30);
 
-  
+
 
 }
 
@@ -140,4 +140,8 @@ if(stars){
   pop();
 
 
+}
+
+function windowResized(){
+  canvas = resizeCanvas(windowWidth/1.6,windowHeight);
 }
