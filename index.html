@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Orbital Physics</title>
+
+    <script src="./libraries/p5.js" charset="utf-8"></script>
+    <script src="./circleObject.js" charset="utf-8"></script>
+    <script src="./functions.js" charset="utf-8"></script>
+    <script src="./sketch.js" charset="utf-8"></script>
+  </head>
+  <body>
+    <div class="sliderContainer">
+
+
+        <label for="starSlider" class="sliderLabel" id="starLabel">Number of stars</label>
+       <input type="range" name="number_of_stars" value="0" min ="0" max="7000" id="starSlider" class="sliders">
+       <br>
+       <br>
+
+       <button type="button" name="button" onclick="drawStars()"id="reloadButton">Reload</button>
+</div>
+    <style media="screen">
+
+      body{
+        border:0;
+        margin:0;
+        padding:0;
+        background-color: #222222;
+      }
+      #opacitySlider{
+        position: relative;
+        top:1
+      }
+      .sliderLabel{
+        position: relative;
+        top:2vh;
+      }
+
+      #setStars{
+        position: absolute;
+        right:10vw;
+        top:2.7vh;
+        color: #cccccc;
+        font-family: sans-serif;
+      }
+      #reloadButton{
+        outline: none;
+        border-radius: 0.7vh;
+        background: linear-gradient(rgba(0,210,37,1)10%,rgba(0,124,27,1)90%);
+        border:none;
+        width:13vw;
+        height:7vh;
+        color: white;
+        text-transform: uppercase;
+        font-size: 1.4rem;
+        position: absolute;
+        bottom: 3vh;
+        cursor: pointer;
+        transition:  all 0.1s ease;
+      }
+      #reloadButton:active{
+        background: linear-gradient(rgba(0,140,27,1)100%,rgba(0,140,27,1)0%);
+      }
+
+      #reloadButton:hover{
+        height:6.8vh;
+        bottom:2.8vh;
+        background-color: #cf24ff;
+      }
+
+
+      #p__no-of-stars_set{
+        color: white;
+        font-size: 1.1rem;
+        opacity: 1;
+        font-family: sans-serif;
+      }
+
+      .sliderContainer{
+        position: absolute;
+        right:5vw;
+        top:2vh;
+        height:80vh;
+        width:30vw;
+        border-radius:1vh;
+        background-color: #333333;
+        font-family: sans-serif;
+        color: white;
+        font-size: 1.2rem;
+        padding-top: 2vh;
+        padding-left: 1vw;
+      }
+
+      #p5Canvas{
+        position: absolute;
+        left:0;
+        top:0;
+      }
+      .sliders{
+        border: none;
+        outline: none;
+        -webkit-appearance:none;
+        appearance:none;
+        position: relative;
+        top:2vh;
+        width:25vw;
+        opacity: 0.8;
+        border-radius: 0.5vh;
+        background-color: #ffffff;
+        transition: all 0.3s ease;
+      }
+
+      .sliders::-webkit-slider-thumb{
+        -webkit-appearance:none;
+        appearance:none;
+        width:25px;
+        height:25px;
+        background: #969696;
+        cursor: pointer;
+        border-radius: 0.5vh;
+        transition: all 0.1s ease;
+      }
+      .sliders::-moz-range-thumb{
+        -webkit-appearance:none;
+        appearance:none;
+        width:25px;
+        height:25px;
+        background: #969696;
+        cursor: pointer;
+        border-radius: 0.5vh;
+        transition: all 0.1s ease;
+      }
+
+
+      .sliders::-webkit-slider-thumb:hover{
+        background: #7aa7fa;
+      }
+      .sliders::-moz-range-thumb:hover{
+            background: #7aa7fa;
+      }
+
+
+      .sliders:hover{
+        opacity: 1;
+      }
+
+
+    </style>
+
+  </body>
+</html>
